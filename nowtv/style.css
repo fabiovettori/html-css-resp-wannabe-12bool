@@ -1,0 +1,84 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('fonts/HelveticaNeue.ttf');
+    font-weight: normal;
+}
+
+body {
+    font-family: HelveticaNeue;
+}
+
+/* HEADER */
+header div {
+    height: 60px;
+    background-color: #ffb800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .left {
+    position: absolute;
+    font-size: 22px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+}
+
+header img {
+    height: 27px;
+    width: 120px;
+}
+
+header .right {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+header .right button {
+    display: none;
+}
+
+
+@media screen and (min-width: 767px) {
+    header div > span {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header .right > span {
+        display: none;
+    }
+
+    header .right button {
+        display: block;
+    }
+
+    header button {
+        text-transform: capitalize;
+        background-color: rgba(255,255,255,0.25);
+        padding: 11px 18px;
+        border: 0;
+        color: inherit;
+        border-radius: 24px;
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    header .right span {
+        margin-right: 8px;
+    }
+}
